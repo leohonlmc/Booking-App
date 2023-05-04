@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  pointer-events: none;
+}
+
+.Home {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url("../public/background.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-size: 100% 100vh;
+  background-attachment: scroll;
+}
+
+/* ############ navBar css ############*/
+
+.navbar-dark .navbar-brand {
+  color: #00c2ff;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.navbar-dark .navbar-text {
+  color: white;
+}
+
+.navbar-dark .navbar-text > strong {
+  color: #00c2ff;
+}
+
+/* ############ navBar css end ############*/
+
+/* ############ meeting room css ############*/
+
+.meeting-room-div {
+  position: relative;
+  height: 55%;
+  background-image: url("../public/meetingRoom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.center-div {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.greeting {
+  color: #504f4f;
+}
+
+.greeting > strong {
+  color: #00c2ff;
+}
+
+.input-username {
+  width: 40%;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  color: #6b6b6b;
+  font-weight: 400;
+  padding: 15px;
+  margin: 3%;
+}
+
+/* ############ meeting room css end ############*/
+
+.slogan {
+  text-align: center;
+  margin: 4%;
+}
+
+.slogan > strong {
+  color: #00c2ff;
+  font-weight: bold;
+}
+
+.steps-div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  /* height: 100%; */
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.step {
+  width: 50%;
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+strong {
+  color: #00c2ff;
+}
+
+.step > .left-text {
+  text-align: right;
+  font-size: 1.7rem;
+}
+
+.step > .right-text {
+  text-align: left;
+  font-size: 1.7rem;
+  margin-top: 24%;
+}
+
+.room-demo-img {
+  border-radius: 20px;
+  width: 300px;
+  height: 100%;
+  /* move img to right */
+  display: -webkit-box;
+  margin-left: auto;
+}
+
+.left-text-mid {
+  text-align: right;
+  font-size: 1.7rem;
+  margin-top: 9%;
+}
+
+.confirmation-demo-img {
+  border-radius: 20px;
+  width: 300px;
+  height: 100%;
+}
+
+.step > input {
+  width: 40%;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  background-color: white;
+  color: #6b6b6b;
+  font-weight: 400;
+  padding: 15px;
+}
+
+.done {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 100px;
+}
+.done > strong {
+  text-align: center;
+  font-size: 1.7rem;
+
+  background-image: radial-gradient(
+    191.23% 10654.38% at 105.26% 70%,
+    #07c4ff 5%,
+    rgba(0, 0, 0, 0) 100%,
+    rgba(255, 255, 255, 0.149505) 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.copyright {
+  color: white;
+  text-align: center;
+}
