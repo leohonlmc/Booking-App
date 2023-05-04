@@ -7,13 +7,13 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-#Introduction:
+Introduction:
 
 The Office Room Booking App is made to make reserving rooms inside an office building easier. Employees may simply reserve meeting rooms, conference rooms, and other places for events like meetings, interviews, training sessions, and more with this app.
 
 In this app, it is considered as a simulator or demo of an internal office booking app,  user auth is not necessary so they can choose their name to start the service.
 
-#Features:
+Features:
 
 Room Booking: 
 Users can book a room by selecting the date, time, and room. They also need to clarify the purpose of making reservations. 
@@ -39,7 +39,7 @@ The Office Room Booking App is built with React as frontend, Node.js as backend,
 Architecture:
 The application follows a client-server architecture, where the client side is built using React and communicates with the server side using Axios. The server side is built using Node.js and uses MongoDB for storing data.
 
-#API Documentation:
+API Documentation:
 
 The following route endpoints are available for interacting with the server side:
 
@@ -65,6 +65,6 @@ PUT /bookings/:id - Updates details of a specific booking.
 
 DELETE /bookings/:id - Deletes a specific booking from the system.
 
-#Conclusion:
+Conclusion:
 
 The Office Room renting App is a user-friendly tool created to make renting rooms inside an office building easier. It can assist staff members and administrators in managing their office space more effectively because of its user-friendly design and robust features.
