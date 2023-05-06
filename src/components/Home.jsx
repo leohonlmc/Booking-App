@@ -1,12 +1,24 @@
 import "../Home.css";
-import Button from "react-bootstrap/Button";
+import React, { useEffect, useState, useRef } from "react";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
+  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    Aos.init({ duration: 1100 });
+    if (!localStorage.getItem("username")) {
+      navigate("/");
+    }
+    localStorage.removeItem("username");
+  }, [navigate]);
+
   return (
     <div className="Home">
       <Navbar bg="dark" variant="dark">
@@ -22,7 +34,7 @@ function Home() {
             Booking App
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/">Booking</Nav.Link>
+            {/* <Nav.Link href="/">Booking</Nav.Link> */}
           </Nav>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
@@ -41,13 +53,24 @@ function Home() {
           <input
             className="input-username"
             placeholder="Let us know your name..."
+            onChange={(e) => setUsername(e.target.value)}
+            onKeyPress={(e) => {
+              if (e.key === "Enter") {
+                localStorage.setItem(
+                  "username",
+                  username.charAt(0).toUpperCase() +
+                    username.substr(1).toLowerCase()
+                );
+                navigate("/MyBooking");
+              }
+            }}
           ></input>
         </div>
       </div>
       <h2 className="slogan">
         Office room booking is getting <strong>easier</strong>{" "}
       </h2>
-      <div className="steps-div">
+      <div className="steps-div" data-aos="fade-up">
         <div className="step">
           <p className="left-text">
             <strong>Step 1</strong> : Let us know your name

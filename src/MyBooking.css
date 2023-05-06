@@ -1,0 +1,46 @@
+.myBooking {
+  width: 80%;
+  margin: 3% 10% 10% 10%;
+  color: white;
+}
+
+.myBooking > h1 {
+  margin-bottom: 3%;
+}
+
+.schedule-list {
+  /* display: flex; */
+  text-align: center;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: 10%;
+  padding-bottom: 10%;
+  border-radius: 10px;
+  background: rgba(200, 200, 200, 0.2);
+}
+
+.schedule-list > h3 {
+  color: #525252;
+  width: 80%;
+  margin: 0% 10% 0% 10%;
+}
+
+.schedule-list > h2 {
+  color: #525252;
+  margin: 3%;
+}
+
+.newBooking {
+  /* background-color: #00c2ff; */
+  color: #525252;
+  border-radius: 40px;
+  padding: 0.5% 1.5% 0.5% 1.5%;
+  border: 1px solid #00c2ff;
+  transition: 0.5s;
+}
+
+.newBooking:hover {
+  background-color: #00c2ff;
+  color: white;
+  border: 1px solid #00c2ff;
+}
