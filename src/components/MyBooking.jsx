@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 function MyBooking() {
   const username = localStorage.getItem("username");
   const navigate = useNavigate();
-  const [schedule, setSchedule] = useState(0);
+  const [schedule, setSchedule] = useState(1);
 
   let quotes = [
     "“The meetings can be a lot of fun or they can be frustrating.”",
@@ -50,45 +50,154 @@ function MyBooking() {
     setAuthor(randomNum);
   }, [navigate, quote, author]);
 
-  return (
-    <div className="Home">
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="/">
-            <img
-              src="/meeting_room_96.png"
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
-              alt="React Bootstrap logo"
-            />
-            Booking App
-          </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/">New Booking</Nav.Link>
-          </Nav>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              Hi, <strong>{username}</strong> !
-            </Navbar.Text>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+  if (schedule === 0) {
+    return (
+      <div className="Home">
+        <Navbar bg="dark" variant="dark">
+          <Container>
+            <Navbar.Brand href="/">
+              <img
+                src="/meeting_room_96.png"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt="React Bootstrap logo"
+              />
+              Booking App
+            </Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link href="/NewBooking">New Booking</Nav.Link>
+            </Nav>
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">
+              <Navbar.Text>
+                <button
+                  className="switchUser"
+                  onClick={() => {
+                    navigate("/");
+                  }}
+                >
+                  Switch User
+                </button>
+              </Navbar.Text>
+              <Navbar.Text>
+                Hi, <strong>{username}</strong> !
+              </Navbar.Text>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
 
-      <div className="myBooking">
-        <h1>Upcoming Schedule: {schedule}</h1>
+        <div className="myBooking">
+          <h1>Upcoming Schedule: {schedule}</h1>
 
-        <div className="schedule-list">
-          <h3 className="quotes">{quotes[quote]}</h3>
-          <h2>{authors[author]}</h2>
-          <button className="newBooking">New Booking</button>
+          <div className="schedule-list">
+            <h3 className="quotes">{quotes[quote]}</h3>
+            <h2>{authors[author]}</h2>
+            <button
+              className="newBooking"
+              onClick={() => {
+                navigate("/NewBooking");
+              }}
+            >
+              New Booking
+            </button>
+          </div>
         </div>
-      </div>
 
-      <p className="copyright">Copyright © 2023 Booking App</p>
-    </div>
-  );
+        <p className="copyright">Copyright © 2023 Booking App</p>
+      </div>
+    );
+  } else {
+    return (
+      <div className="Home">
+        <Navbar bg="dark" variant="dark">
+          <Container>
+            <Navbar.Brand href="/">
+              <img
+                src="/meeting_room_96.png"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt="React Bootstrap logo"
+              />
+              Booking App
+            </Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link href="/NewBooking">New Booking</Nav.Link>
+            </Nav>
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">
+              <Navbar.Text>
+                <button
+                  className="switchUser"
+                  onClick={() => {
+                    navigate("/");
+                  }}
+                >
+                  Switch User
+                </button>
+              </Navbar.Text>
+              <Navbar.Text>
+                Hi, <strong>{username}</strong> !
+              </Navbar.Text>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+
+        <div className="myBooking">
+          <h1>Upcoming Schedule: {schedule}</h1>
+
+          <div className="schedule-list-1">
+            <div className="schedules-lastest">
+              <div className="Date">
+                <span>25 Apr</span>
+              </div>
+              <div className="block"></div>
+              <div className="roomNum">Room 1</div>
+              <div className="time">3:30 - 5:30</div>
+              <div className="participants">10 👨🏻‍💼</div>
+              <div className="button-div">
+                <button className="viewButton">View</button>
+              </div>
+              <div className="button-div">
+                <button className="cancelButton">Cancel</button>
+              </div>
+            </div>
+            <div className="upcoming-schedules">
+              <div className="schedules">
+                <span className="Date">25 Apr</span>
+                <div className="block"></div>
+                <div className="roomNum">Room 1</div>
+                <div className="time">3:30 - 5:30</div>
+                <div className="participants">10 👨🏻‍💼</div>
+                <div className="button-div">
+                  <button className="viewButton">View</button>
+                </div>
+                <div className="button-div">
+                  <button className="cancelButton">Cancel</button>
+                </div>
+              </div>
+              <div className="schedules">
+                <span className="Date">25 Apr</span>
+                <div className="block"></div>
+                <div className="roomNum">Room 1</div>
+                <div className="time">3:30 - 5:30</div>
+                <div className="participants">10 👨🏻‍💼</div>
+                <div className="button-div">
+                  <button className="viewButton">View</button>
+                </div>
+                <div className="button-div">
+                  <button className="cancelButton">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p className="copyright">Copyright © 2023 Booking App</p>
+      </div>
+    );
+  }
 }
 
 export default MyBooking;

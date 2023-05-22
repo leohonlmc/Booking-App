@@ -30,8 +30,126 @@
   margin: 3%;
 }
 
+.schedule-list-1 {
+  overflow: auto;
+  text-align: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  border-radius: 10px;
+  background: rgba(200, 200, 200, 0.5);
+  /* height: 500px; */
+}
+
+.schedules-lastest {
+  position: relative;
+  display: flex;
+  margin: auto;
+  width: 90%;
+  height: 70px;
+  border-radius: 20px;
+}
+
+.upcoming-schedules {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.schedules {
+  position: relative;
+  display: flex;
+  margin: auto;
+  width: 90%;
+  height: 70px;
+  /* background-color: aqua; */
+}
+
+.Date {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 12px;
+  left: 0px;
+}
+
+.block {
+  width: 6px;
+  background-color: #525252;
+  margin-left: 120px;
+}
+
+.roomNum {
+  font-weight: bold;
+  color: #00c2ff;
+  font-size: 1.5rem;
+  margin: 0% 2% 0% 0%;
+  position: absolute;
+  bottom: 0;
+  left: 150px;
+}
+
+.time {
+  font-weight: bold;
+  color: #6b6b6b;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 250px;
+}
+
+.participants {
+  font-weight: bold;
+  color: black;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 400px;
+}
+
+.viewButton {
+  width: 80px;
+  background-color: #00c2ff;
+  color: white;
+  border-radius: 40px;
+  border: 0px;
+  padding: 0.5% 1.5% 0.5% 1.5%;
+  transition: 0.5s;
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 0;
+  left: 500px;
+}
+
+.cancelButton {
+  width: 100px;
+  background-color: #737576;
+  color: white;
+  border-radius: 40px;
+  border: 0px;
+  padding: 0.5% 1.5% 0.5% 1.5%;
+  transition: 0.5s;
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 0;
+  left: 600px;
+}
+
+.switchUser {
+  width: 120px;
+  margin-right: 20px;
+  background-color: transparent;
+  color: white;
+  border-radius: 40px;
+  padding: 0.5% 1.5% 0.5% 1.5%;
+  border: 1px solid #00c2ff;
+  transition: 0.5s;
+}
+
+.switchUser:hover {
+  background-color: #00c2ff;
+}
+
 .newBooking {
-  /* background-color: #00c2ff; */
+  background-color: transparent;
   color: #525252;
   border-radius: 40px;
   padding: 0.5% 1.5% 0.5% 1.5%;
@@ -42,5 +160,4 @@
 .newBooking:hover {
   background-color: #00c2ff;
   color: white;
-  border: 1px solid #00c2ff;
 }
