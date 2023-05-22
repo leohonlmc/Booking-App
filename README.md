@@ -1,8 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+# Booking App
 
 In the project directory, you can run:
 
@@ -11,60 +7,64 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Introduction:
 
-### `npm test`
+The Office Room Booking App is made to make reserving rooms inside an office building easier. Employees may simply reserve meeting rooms, conference rooms, and other places for events like meetings, interviews, training sessions, and more with this app.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In this app, it is considered as a simulator or demo of an internal office booking app,  user auth is not necessary so they can choose their name to start the service.
 
-### `npm run build`
+Features:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Room Booking: 
+Users can book a room by selecting the date, time, and room. They also need to clarify the purpose of making reservations. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Room Availability: 
+Users can view the availability of rooms based on their preferred date and time.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Room Management: 
+Users can cancel or modify the booking while admins can manage the room inventory and update room availability. They can also add new rooms and remove existing ones.
 
-### `npm run eject`
+User Management: 
+Admins have the right to add new users, remove users, and manage user roles.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Notifications: 
+Users receive notifications via email, and SMS confirming their room booking and as a reminder for an upcoming event.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Reporting: 
+Admins can generate and manage reports based on room usage, booking trends, and so on.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Technology:
+The Office Room Booking App is built with React as frontend, Node.js as backend, and MongoDB as the semi-structured database. It also utilizes various third-party services such as AWS S3 for storing user documents and AWS SDK for sending SMS notifications.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Architecture:
+The application follows a client-server architecture, where the client side is built using React and communicates with the server side using Axios. The server side is built using Node.js and uses MongoDB for storing data.
 
-## Learn More
+API Documentation:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The following route endpoints are available for interacting with the server side:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Room:
+GET /rooms - Returns a list of all rooms.
 
-### Code Splitting
+GET /rooms/:id - Returns details of a specific room.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+POST /rooms - Adds a new room to the inventory.
 
-### Analyzing the Bundle Size
+PUT /rooms/:id - Updates details of a specific room.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+DELETE /rooms/:id - Deletes a specific room from the inventory.
 
-### Making a Progressive Web App
+Booking:
+GET /bookings - Returns a list of all bookings.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+GET /bookings/:id - Returns details of a specific booking.
 
-### Advanced Configuration
+POST /bookings - Adds a new booking to the system.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+PUT /bookings/:id - Updates details of a specific booking.
 
-### Deployment
+DELETE /bookings/:id - Deletes a specific booking from the system.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Conclusion:
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The Office Room renting App is a user-friendly tool created to make renting rooms inside an office building easier. It can assist staff members and administrators in managing their office space more effectively because of its user-friendly design and robust features.
