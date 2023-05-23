@@ -70,7 +70,7 @@ function Home() {
       <h2 className="slogan">
         Office room booking is getting <strong>easier</strong>{" "}
       </h2>
-      <div className="steps-div" data-aos="fade-up">
+      <div className="steps-div">
         <div className="step">
           <p className="left-text">
             <strong>Step 1</strong> : Let us know your name

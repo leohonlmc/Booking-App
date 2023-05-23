@@ -161,3 +161,81 @@
   background-color: #00c2ff;
   color: white;
 }
+
+@media (max-width: 1020px) {
+  .block {
+    margin-left: 100px;
+  }
+  .Date {
+    font-size: 1.7rem;
+  }
+  .roomNum {
+    font-size: 1.3rem;
+    left: 120px;
+  }
+  .time {
+    font-size: 1.3rem;
+    left: 220px;
+  }
+  .participants {
+    left: 350px;
+  }
+  .viewButton {
+    left: 450px;
+  }
+  .cancelButton {
+    left: 550px;
+  }
+}
+
+@media (max-width: 930px) {
+  .block {
+    margin-left: 80px;
+  }
+  .Date {
+    font-size: 1.5rem;
+  }
+  .roomNum {
+    font-size: 1.1rem;
+    left: 100px;
+  }
+  .time {
+    font-size: 1.1rem;
+    left: 200px;
+  }
+  .participants {
+    left: 300px;
+  }
+  .viewButton {
+    left: 400px;
+  }
+  .cancelButton {
+    left: 500px;
+  }
+}
+
+@media (max-width: 930px) {
+  .block {
+    margin-left: 80px;
+  }
+  .Date {
+    font-size: 1.5rem;
+  }
+  .roomNum {
+    font-size: 1.1rem;
+    left: 100px;
+  }
+  .time {
+    font-size: 1.1rem;
+    left: 200px;
+  }
+  .participants {
+    left: 300px;
+  }
+  .viewButton {
+    left: 400px;
+  }
+  .cancelButton {
+    left: 500px;
+  }
+}
